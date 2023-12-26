@@ -1,0 +1,48 @@
+# System-generated files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python files
+*.py[cod]
+__pycache__/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Virtual environments
+venv/
+ENV/
+
+# Temporary files
+*.tmp
+
+# IDE files
+.idea/
+.vscode/
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+
+# Node.js files
+node_modules/
+
+# Compiled Python files
+*.pyc
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Secret keys and configuration
+.env
+*.pem
+
+# Personal files
+*.bak
+*~
