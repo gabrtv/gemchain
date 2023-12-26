@@ -2,15 +2,15 @@
 
 This is a demonstration of [LangChain](https://www.langchain.com/) with Google's [Gemini Pro](https://ai.google.dev/) model. Not intended for production use.
 
-# Quickstart for local development
+## Quickstart for local development
 
-Grab a Gemini API key from [here](https://makersuite.google.com/app/apikey) and export it as an environment variable:
+After cloning the repo, grab a Gemini API key from [here](https://makersuite.google.com/app/apikey) and export it as an environment variable
 
 ```shell
 export GOOGLE_API_KEY=<YOUR-API-KEY>
 ```
 
-Create a virtual environment and install the requirements.
+Create a virtual environment and install the requirements
 
 ```shell
 python -m venv venv
@@ -18,14 +18,16 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Run the application server:
+Run the application server
 ```shell
 python -m app.main
 ```
 
-Open the playground in your browser at `http://localhost:5000/`
+Open the playground in your browser at [http://localhost:5000/](http://localhost:5000/)
 
-# Quick deploy to Google Cloud
+## Quick deploy to Google Cloud
+
+If you don't have a Google Cloud account, you can get one for [free with $300 in credits](https://cloud.google.com/free?hl=en). You will also need a local [Docker](https://docs.docker.com/get-docker/) and [gcloud CLI](https://cloud.google.com/sdk/gcloud).
 
 Set your default Google Cloud project
 ```shell
@@ -36,7 +38,6 @@ gcloud config set project $GOOGLE_PROJECT_ID
 Build and push the image to Google Cloud
 ```shell
 export GEMCHAIN_IMAGE="gcr.io/<YOUR-PROJECT-ID>/gemchain:latest"
-export GEMCHAIN_IMAGE="gcr.io/graceful-wall-382722/gemchain:latest"
 gcloud docker -- push $GEMCHAIN_IMAGE
 ```
 
